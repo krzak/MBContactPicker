@@ -8,6 +8,27 @@
 
 #import "MBContactModel.h"
 
+@interface MBContactModel ()
+@end
+
 @implementation MBContactModel
+
+- (instancetype) initWithAPRecord:(APRecord *)record
+{
+    if (self = [self init]) {
+        self.recordID = record.recordID;
+        self.type     = record.recordType;
+    }
+    return self;
+}
+
+- (instancetype) initWithAPContact:(APContact *)contact
+{
+    if (self = [self initWithAPRecord:contact]) {
+        self.firstName = contact.firstName;
+        self.lastName = contact.lastName;
+    }
+    return self;
+}
 
 @end
