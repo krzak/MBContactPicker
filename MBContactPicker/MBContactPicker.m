@@ -87,6 +87,7 @@ CGFloat const kAnimationSpeed = .25;
     MBContactCollectionView *contactCollectionView = [MBContactCollectionView contactCollectionViewWithFrame:self.bounds];
     contactCollectionView.contactDelegate = self;
     contactCollectionView.clipsToBounds = YES;
+    contactCollectionView.backgroundColor = [UIColor clearColor];
     contactCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:contactCollectionView];
     self.contactCollectionView = contactCollectionView;
@@ -96,6 +97,7 @@ CGFloat const kAnimationSpeed = .25;
     searchTableView.delegate = self;
     searchTableView.translatesAutoresizingMaskIntoConstraints = NO;
     searchTableView.hidden = YES;
+    searchTableView.backgroundColor = [UIColor clearColor];
     [self addSubview:searchTableView];
     self.searchTableView = searchTableView;
     
